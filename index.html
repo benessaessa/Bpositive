@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>B+</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+    rel="stylesheet">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+    integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+
+  <link href="lib/slick/slick.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/mainStyle.css" rel="stylesheet">
+  <link href="css/modal.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#hero">B+</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="#team"><i class="fa fa-user-circle-o"></i> Team</a></li>
+          <li><a href="#contact"><i class="fa fa-envelope"></i> Contact Us</a></li>
+          <li><a href="#portfolio"><i class="fa fa-tint"></i> Blood</a></li>
+          <li class="menu-active"><a href="#hero"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="" data-toggle="modal" data-target="#registration"><i class="fa fa-user"></i> Register</a></li>
+          <li><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in"></i> Login</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+  <!---- registration modal----->
+  <div class="modal" id="registration">
+    <div class="modal-dialog slideDownAnimation">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <span>Registration</span>
+          <i class='fa  fa-wpforms p-3'> </i>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <span> Step 1</span>
+            <span> Step 2</span>
+          </div>
+          <div class="progress mb-5">
+             <div class="progress-bar" style="width:0%"></div>
+          </div>
+          <form action="" class="modal-form">
+            <div class="step1-registration">
+              <h3 class="step1-Header">STEP 1</h3>
+              <div class="row">
+                  <div class="col">
+                    <div class="input-group margin-bottom-sm">
+                      <input type="text" class="form-control" name="name" placeholder=" name " required="required">
+                      
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="input-group">
+                      <input type="text" class="form-control" name="username" placeholder="user name " required="reauired">
+                      
+                    </div><br>
+                  </div>
+                </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="mail">
+              </div>
+              <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="password">
+              </div>
+              <div class="form-group">
+                <input type="password" name="confirmpassword" class="form-control" placeholder="confirm password">
+              </div>
+              <div class="d-flex justify-content-end">
+                <button class="btn toStep2-btn"> Step 2</button>
+              </div>
+            </div>
+            <div class="step2-registration">
+              <div class="form-group">
+                <input type="phone" name="phone" class="form-control" placeholder="phone number">
+              </div>
+              <div class="form-group">
+                <select class="form-control" name="city">
+                  <option disabled selected="true">City</option>
+                  <option>Assuit</option>
+                  <option>cairo</option>
+                  <option>Alex</option>
+                  <option>malawy</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="date" name="birthdate" class="form-control" onfocus=(this.type='date' )>
+              </div>
+              <div class="form-check-inline">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="gender">male
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="gender"> female
+                </label>
+              </div>
+             <!----> <div class="input-group margin-bottom-sm">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="input-group">
+                        <span class="input-group-btn">
+                          <input type="text" class="form-control" readonly>
+                          <span class="btn btn-danger btn-file">
+                            upload <input type="file" id="input-img">
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="show-img">
+                        <img id='img-upload'>
+                      </div>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-3">
+                <button class="btn btn-primary toStep1-btn"> Step 1</button>
+                <input type="submit" class="btn submit" value="Finish">
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---------login modal-------------->
+  <div class="modal" id="login">
+    <div class="modal-dialog slideDownAnimation">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <span>Login</span>
+          <i class='fa fa-lock p-3'> </i>
+        </div>
+        <div class="modal-body">
+          <form action="" class="modal-form">
+            <div class="form-group">
+              <label for="mail-phone">Email address or Phone number:</label>
+              <input type="text" class="form-control" id="mail-phone">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" name="password" class="form-control" id="pwd">
+            </div>
+            <div class="form-group form-check d-flex  flex-wrap justify-content-between">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Remember me
+              </label>
+              <a href="">Forget your password</a>
+            </div>
+            <input type="submit" class="btn submit" value="login">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Welcome to Be + </h1>
+      <h2>this website helps any one for finding Donors </h2>
+      <a href="#facts" class="btn-get-started">Get Started</a>
+    </div>
+  </section><!-- #hero -->
+
+  <main id="main">
+    <!--==========================
+      Facts Section
+    ============================-->
+    <section id="facts">
+      <div class="container wow fadeIn">
+        <div class="section-header">
+          <h3 class="section-title">Facts</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            doloremque</p>
+        </div>
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">232</span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">521</span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">1,463</span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">15</span>
+            <p>Hard Workers</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #facts -->
+
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio">
+      <div class="container-fluid wow fadeInUp ">
+        <div class="section-header">
+        <h3 class="text-center font-weight-bold section-title"> BLOOD Group </h3>
+        <h5 class="text-center font-weight-bold p-3">( هل جزاء الإحسان إلا الإحسان )</h5><br>
+        </div>
+        <div class="row">
+    
+        <div class="col-lg-12">
+          <ul id="portfolio-flters">
+            <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web font-weight-bold" class="filter-active">ALL Groups</li>
+            <li data-filter=".filter-app">O+</li>
+            <li data-filter=".filter-card">O-</li>
+            <li data-filter=".filter-logo">A+</li>
+            <li data-filter=".filter-web">A-</li>
+            <li data-filter=".filter-app">B+</li>
+            <li data-filter=".filter-card">B-</li>
+            <li data-filter=".filter-logo">AB+</li>
+            <li data-filter=".filter-web">AB-</li>
+          </ul>
+        </div>
+        </div>
+    
+      <div class="row" id="portfolio-wrapper">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/team-1.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/banner2.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/2.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/15.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>	
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/team5.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/team4.png"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/team3.png"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/team2.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/team-4.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/team-3.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/team-2.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/team-1.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
+                </ul>
+              </div>
+              <div class="portfolio-info">
+                <h4>App1</h4>
+                
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+    
+       </div>
+      </div>
+    </section>
+    <!-- #portfolio -->
+    <!-- timeline -->
+    <section class="box-content box-2" id="nav-story">
+        <h2 class="text-center font-weight-bold wow bounceInUp"><i class="fa fa-tint"></i> برنامج المتبرعين بالدم </h2>
+        <div class="container">
+          <div class="row heading">
+            <div class="col-lg-12">	
+                <hr class="line">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="timeline">
+                <li class="wow bounceInUp" >
+                  <div class="timeline-image">
+                    <i class="fa fa-ambulance"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4> من يستطيع التبرع بالدم؟ </h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p class="text-muted">يجب ألّا يقل وزن المتبرعين عن 110 أرطال وألّا يقل عمرهم عن 17 عامًا. في مينيسوتا، يمكن لمن بلغوا سن الـ 16 التبرع بإقرار مكتوب مقدم من أحد الوالدين أو الوصي. في موعد التبرع الخاص بك، ستكمل استبيان صحة مختصر للتأكد من أن التبرع بالدم آمن لك ولمتلقي الدم منك.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted wow bounceInUp">
+                  <div class="timeline-image">
+                    <i class="fa fa-heart-o"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4>ما هو الفرق بين التبرع بالدم الكامل والتبرع الآلي (الفصادة)؟</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p class="text-muted">يحتوي الدم على مكونات عديدة: خلايا الدم الحمراء والصفائح الدموية وخلايا الدم البيضاء والبلازما. يتبرع المانحون عادة بحوالي 1 باينت من الدم، خلال عملية التبرع بالدم الكامل. وخلال التبرع بالصفائح الدموية أو البلازما، يتم جمع الدم ومن ثَمَّ فصل مكوناته بواسطة جهاز؛ حيث يحافظ الجهاز على الصفائح الدموية أو البلازما ويعيد الكمية المتبقية منها لك. يُحفظ دمك داخل مجموعة أنابيب معقمة أحادية الاستخدام ومعدات معقمة، حث تكون العملية آمنة تمامًا. يسمح لك هذا الإجراء بالتبرع بشكل أكبر.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="wow bounceInUp">
+                  <div class="timeline-image">
+                    <i class="fa fa-ambulance"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4>هل أستطيع التبرع إن كنت مصابًا ببرد، أو إنفلونزا، أو حمى في يوم التبرع؟</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p class="text-muted">يجب أن تخلو من أعراض البرد أو الإنفلونزا أو الحمى يوم التبرع.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted wow bounceInUp">
+                  <div class="timeline-image">
+                    <i class="fa fa-clock-o"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4>كم الفترة التي يستغرقها التبرع؟</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p class="text-muted">يستغرق التبرع الكامل بالدم ما يقرب من 45 إلى 60 دقيقة.
+                        يستغرق التبرع بالبلازما أو الصفائح الدموية (يسمى بالفصادة أو بالتبرع الآلي) من ساعة ونصف إلى ساعتين. يوفر مركز Mayo للتبرع بالدم في روتشستر أجهزة تلفاز، وفيديوهات حسب الطلب، وإمكانية استخدام للإنترنت اللاسلكي ليستخدمها المتبرعون أثناء تبرعهم.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="wow bounceInUp">
+                  <div class="timeline-image">
+                    <i class="fa fa-edit"></i>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4>كم مرة يمكنني التبرع؟</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p class="text-muted">يمكنك التبرع بالدم كاملاً كل 84 يومًا .
+                        يمكن لمتبرعي البلازما التبرع كل 28 يومًا متى كان ذلك ممكنًا.
+                        يمكن للمتبرعين بالصفائح الدموية التبرع كل ثمانية أيام وحتى 24 مرة على مدار العام.
+                        يمكن لمتبرعي خلايا الدم الحمراء المزدوجة التبرع كل 168 يومًا متى كان ذلك ممكنًا.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>	
+        </div>
+    </section>
+    <!-- end of timeline -->
+    <!--==========================
+      Team Section
+    ============================-->
+  <section id="team">
+			<div class="container">
+        <h2 class="text-center"> Meat our Team</h2>
+				  <div class="row">
+		  
+					<div class="col-lg-3 col-md-6 wow fadeInUp">
+					  <div class="member">
+						<img src="img/team4.png" class="img-fluid" alt="">
+						<div class="member-info">
+						  <div class="member-info-content">
+							<h4>Ahmed Alaa</h4>
+							<span>Frontend Developer</span>
+							<div class="social">
+							  <a href=""><i class="fa fa-twitter"></i></a>
+							  <a href=""><i class="fa fa-facebook"></i></a>
+							  <a href=""><i class="fa fa-google-plus"></i></a>
+							  <a href=""><i class="fa fa-linkedin"></i></a>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+		  
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+					  <div class="member">
+						<img src="img/team2.jpg" class="img-fluid" alt="">
+						<div class="member-info">
+						  <div class="member-info-content">
+							<h4>Mo'men Adel</h4>
+							<span>BackEnd Developer</span>
+							<div class="social">
+							  <a href=""><i class="fa fa-twitter"></i></a>
+							  <a href=""><i class="fa fa-facebook"></i></a>
+							  <a href=""><i class="fa fa-google-plus"></i></a>
+							  <a href=""><i class="fa fa-linkedin"></i></a>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+		  
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+					  <div class="member">
+						<img src="img/team5.jpg" class="img-fluid" alt="">
+						<div class="member-info">
+						  <div class="member-info-content">
+							<h4>Mohamed Salah</h4>
+							<span>Backend Developer</span>
+							<div class="social">
+							  <a href=""><i class="fa fa-twitter"></i></a>
+							  <a href=""><i class="fa fa-facebook"></i></a>
+							  <a href=""><i class="fa fa-google-plus"></i></a>
+							  <a href=""><i class="fa fa-linkedin"></i></a>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+		  
+					<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+					  <div class="member">
+						<img src="img/team4.png" class="img-fluid" alt="">
+						<div class="member-info">
+						  <div class="member-info-content">
+							<h4>Mohamed Essa</h4>
+							<span>Front End Developer</span>
+							<div class="social">
+							  <a href=""><i class="fa fa-twitter"></i></a>
+							  <a href=""><i class="fa fa-facebook"></i></a>
+							  <a href=""><i class="fa fa-google-plus"></i></a>
+							  <a href=""><i class="fa fa-linkedin"></i></a>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+		  
+				  </div>
+				</div>
+	</section><!-- #team -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Contact</h3>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            doloremque</p>
+        </div>
+      </div>
+
+      <!-- Uncomment below if you wan to use dynamic maps -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452"
+        width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      <div class="container wow fadeInUp mt-5">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p>A108 Adam Street<br>New York, NY 535022</p>
+              </div>
+
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p>info@example.com</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 5589 55488 55s</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                    data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                    data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                    data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required"
+                    data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+         Copyright &copy; <strong>Mohamed Essa</strong>. All Rights Reserved
+      </div>
+  
+    </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  <script src="lib/slick/slick.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/file.js"></script>
+
+</body>
+
+</html>
