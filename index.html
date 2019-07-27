@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>B+</title>
@@ -39,25 +38,35 @@
   <!--==========================
   Header
   ============================-->
-  <header id="header">
-    <div class="container">
-
-      <div id="logo" class="pull-left">
+   <header id="header">
+    <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top">
+      <div id="logo" class="pull-left ml-5">
         <h1><a href="#hero">B+</a></h1>
       </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li><a href="#team"><i class="fa fa-user-circle-o"></i> Team</a></li>
-          <li><a href="#contact"><i class="fa fa-envelope"></i> Contact Us</a></li>
-          <li><a href="#portfolio"><i class="fa fa-tint"></i> Blood</a></li>
-          <li class="menu-active"><a href="#hero"><i class="fa fa-home"></i> Home</a></li>
-          <li><a href="" data-toggle="modal" data-target="#registration"><i class="fa fa-user"></i> Register</a></li>
-          <li><a href="" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in"></i> Login</a></li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+		aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+      
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <!--<nav id="nav-menu-container">-->
+        <ul class="nav-menu ml-auto mr-5">
+          <li><a href="#contact "><i class="fa fa-envelope"></i> Contact Us</a></li>
+          <li><a href="#team" ><i class="fa fa-user-circle-o"></i> Team</a></li>
+          <li><a href="#nav-story" ><i class="fa fa-edit"> </i> How To</a></li>
+          <li><a href="#portfolio" ><i class="fa fa-tint"></i> Blood</a></li>
+          <li class="menu-active" ><a href="#hero"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="" data-toggle="modal"  data-target="#registration"><i class="fa fa-user"></i> Register</a></li>
+          <li><a href="" data-toggle="modal"  data-target="#login"><i class="fa fa-sign-in"></i> Login</a></li>
         </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
+        
+        </div>
+        </nav>
+      <!-- #nav-menu-container -->
+
+  </header>
+  <!-- #header -->
   <!---- registration modal----->
   <div class="modal" id="registration">
     <div class="modal-dialog slideDownAnimation">
@@ -65,19 +74,11 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <span>Registration</span>
-          <i class='fa  fa-wpforms p-3'> </i>
+          <i class='fas fa-wpforms p-3'> </i>
         </div>
         <div class="modal-body">
-          <div class="d-flex justify-content-between">
-            <span> Step 1</span>
-            <span> Step 2</span>
-          </div>
-          <div class="progress mb-5">
-             <div class="progress-bar" style="width:0%"></div>
-          </div>
           <form action="" class="modal-form">
             <div class="step1-registration">
-              <h3 class="step1-Header">STEP 1</h3>
               <div class="row">
                   <div class="col">
                     <div class="input-group margin-bottom-sm">
@@ -177,11 +178,11 @@
           <form action="" class="modal-form">
             <div class="form-group">
               <label for="mail-phone">Email address or Phone number:</label>
-              <input type="text" class="form-control" id="mail-phone">
+              <input type="text" placeholder="Enter your Mail or Phone number" class="form-control" id="mail-phone">
             </div>
             <div class="form-group">
               <label for="pwd">Password:</label>
-              <input type="password" name="password" class="form-control" id="pwd">
+              <input type="password" placeholder="your password" name="password" class="form-control" id="pwd">
             </div>
             <div class="form-group form-check d-flex  flex-wrap justify-content-between">
               <label class="form-check-label">
@@ -201,8 +202,8 @@
   ============================-->
   <section id="hero">
     <div class="hero-container">
-      <h1>Welcome to Be + </h1>
-      <h2>this website helps any one for finding Donors </h2>
+      <h1>Welcome to B+ </h1>
+      <h2>This website helps any one for finding Donors of Blood</h2>
       <a href="#facts" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- #hero -->
@@ -215,19 +216,18 @@
       <div class="container wow fadeIn">
         <div class="section-header">
           <h3 class="section-title">Facts</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-            doloremque</p>
+          <p class="section-description">Alot of people died because of a lack of blood</p>
         </div>
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">232</span>
-            <p>Clients</p>
+            <p>patient</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">521</span>
-            <p>Projects</p>
+            <p>Person need Blood</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
@@ -237,7 +237,7 @@
 
           <div class="col-lg-3 col-6 text-center">
             <span data-toggle="counter-up">15</span>
-            <p>Hard Workers</p>
+            <p>Hospital</p>
           </div>
 
         </div>
@@ -248,7 +248,7 @@
     <!--==========================
       Portfolio Section
     ============================-->
-    <section id="portfolio">
+    <section id="portfolio" data-spy="scroll" data-target="#hero" data-offset="0">
       <div class="container-fluid wow fadeInUp ">
         <div class="section-header">
         <h3 class="text-center font-weight-bold section-title"> BLOOD Group </h3>
@@ -258,286 +258,396 @@
     
         <div class="col-lg-12">
           <ul id="portfolio-flters">
-            <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web font-weight-bold" class="filter-active">ALL Groups</li>
+            <li data-filter=".filter-app, .filter-card, .filter-logo, .filter-web
+            ,.filter-B,.filter-b,.filter-Ab,.filter-ab font-weight-bold" class="filter-active">ALL Groups</li>
             <li data-filter=".filter-app">O+</li>
             <li data-filter=".filter-card">O-</li>
             <li data-filter=".filter-logo">A+</li>
             <li data-filter=".filter-web">A-</li>
-            <li data-filter=".filter-app">B+</li>
-            <li data-filter=".filter-card">B-</li>
-            <li data-filter=".filter-logo">AB+</li>
-            <li data-filter=".filter-web">AB-</li>
+            <li data-filter=".filter-B">B+</li>
+            <li data-filter=".filter-b">B-</li>
+            <li data-filter=".filter-Ab">AB+</li>
+            <li data-filter=".filter-ab">AB-</li>
           </ul>
         </div>
         </div>
     
       <div class="row" id="portfolio-wrapper">
+        <!-- filter O+ -->
         <div class="col-lg-3 col-md-6 portfolio-item filter-app">
           <div class="portfolio-wrap">
             <div class="card">
               <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/about-img.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : O+ </li>
+                <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+              </div>
+              <div class="portfolio-info">
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div> 
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy;Mohamed Sayed</h3>						
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li><img src="img/about-img.jpg"  width="100%" height="200px"></li>
+                </ul> 
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Magaga </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : O+ </li>
+                <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+              </div>
+              <div class="portfolio-info">
+                <div>
+                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                </div>
+              </div>		
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <h3 class="card-header mt-0 text-center">&shy; Salem Zezo</h3>						
               <div class="card-body">
                 <ul class="list-unstyled">
                   <li><img src="img/team-1.jpg"  width="100%" height="200px"></li>
                 </ul> 
                 <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Giza - Haram </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : O+ </li>
+                <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
               </div>
               <div class="portfolio-info">
-                <h4>App1</h4>
-                
                 <div>
                   <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
                   <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
                 </div>
               </div>		
             </div>
-          </div>
+          </div> 
         </div>
-    
-        <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li><img src="img/banner2.jpg"  width="100%" height="200px"></li>
-                </ul> 
-                <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
-              </div>
-              <div class="portfolio-info">
-                <h4>App1</h4>
-                
-                <div>
-                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
-                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
-                </div>
-              </div>		
-            </div>
-          </div>
-        </div>
-    
         <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li><img src="img/2.jpg"  width="100%" height="200px"></li>
-                </ul> 
-                <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
-              </div>
-              <div class="portfolio-info">
-                <h4>App1</h4>
-                
-                <div>
-                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
-                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-1.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : O+ </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
                 </div>
-              </div>		
-            </div>
-          </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div> 
         </div>
-    
+        <!-- end of filter O+ -->
+        <!-- filter O- -->
         <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li><img src="img/15.jpg"  width="100%" height="200px"></li>
-                </ul> 
-                <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
-              </div>
-              <div class="portfolio-info">
-                <h4>App1</h4>
-                
-                <div>
-                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
-                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Gaber Nasser</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-4.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : O-</li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
                 </div>
-              </div>		
-            </div>
-          </div>	
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>	
         </div>
-    
         <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li><img src="img/team5.jpg"  width="100%" height="200px"></li>
-                </ul> 
-                <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
-              </div>
-              <div class="portfolio-info">
-                <h4>App1</h4>
-                
-                <div>
-                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
-                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Amr Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-4.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Cairo </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : O-</li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
                 </div>
-              </div>		
-            </div>
-          </div>
-        </div>
-    
-        <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li><img src="img/team4.png"  width="100%" height="200px"></li>
-                </ul> 
-                <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
               </div>
-              <div class="portfolio-info">
-                <h4>App1</h4>
-                
-                <div>
-                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
-                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
-                </div>
-              </div>		
             </div>
-          </div>
         </div>
-    
         <div class="col-lg-3 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li><img src="img/team3.png"  width="100%" height="200px"></li>
-                </ul> 
-                <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
-              </div>
-              <div class="portfolio-info">
-                <h4>App1</h4>
-                
-                <div>
-                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
-                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Ahmed Mustafa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-4.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Giza </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : O- </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
                 </div>
-              </div>		
-            </div>
-          </div>
-        </div>
-    
-        <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li><img src="img/team2.jpg"  width="100%" height="200px"></li>
-                </ul> 
-                <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
               </div>
-              <div class="portfolio-info">
-                <h4>App1</h4>
-                
-                <div>
-                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
-                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
-                </div>
-              </div>		
             </div>
-          </div>
         </div>
-    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Wahed</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-4.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Alex </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  Blood Group : o- </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <!-- End of filter O- -->
+        <!-- Filter A+ -->
         <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-          <div class="portfolio-wrap">
-            <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li><img src="img/team-4.jpg"  width="100%" height="200px"></li>
-                </ul> 
-                <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
-              </div>
-              <div class="portfolio-info">
-                <h4>App1</h4>
-                
-                <div>
-                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
-                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/profile.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  A+ Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
                 </div>
-              </div>		
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
             </div>
-          </div>
         </div>
-    
         <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
-          <div class="portfolio-wrap">
-            <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li><img src="img/team-3.jpg"  width="100%" height="200px"></li>
-                </ul> 
-                <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
-              </div>
-              <div class="portfolio-info">
-                <h4>App1</h4>
-                
-                <div>
-                  <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
-                  <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/profile.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  A+ Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
                 </div>
-              </div>		
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
             </div>
-          </div>
         </div>
-    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/profile.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  A+ Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+              <div class="portfolio-wrap">
+                <div class="card">
+                  <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      <li><img src="img/profile.jpg"  width="100%" height="200px"></li>
+                    </ul> 
+                    <ul class="list-unstyled">
+                      <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                      <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  A+ Blood Group  </li>
+                    <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                  </div>
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                      <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                    </div>
+                  </div>		
+                </div>
+              </div>
+        </div>
+        <!-- End of filter A+ -->
+        <!-- Filter A- -->
         <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-3.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  A- Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-3.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  A- Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-3.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  A- Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-3.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  A- Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div> 
+        <!-- End of filter A- -->
+        <!-- Filter B+ -->
+        <div class="col-lg-3 col-md-6 portfolio-item filter-B">
           <div class="portfolio-wrap">
             <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <h3 class="card-header mt-0 text-center">&shy; Ali Ahmed</h3>						
               <div class="card-body">
                 <ul class="list-unstyled">
                   <li><img src="img/team-2.jpg"  width="100%" height="200px"></li>
                 </ul> 
                 <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Cairo - Nasr City </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : B+ </li>
+                <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
               </div>
               <div class="portfolio-info">
-                <h4>App1</h4>
-                
                 <div>
                   <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
                   <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
@@ -546,23 +656,20 @@
             </div>
           </div>
         </div>
-    
-        <div class="col-lg-3 col-md-6 portfolio-item filter-logo">
+        <div class="col-lg-3 col-md-6 portfolio-item filter-B">
           <div class="portfolio-wrap">
             <div class="card">
-              <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+              <h3 class="card-header mt-0 text-center">&shy; Ali Ahmed</h3>						
               <div class="card-body">
                 <ul class="list-unstyled">
-                  <li><img src="img/team-1.jpg"  width="100%" height="200px"></li>
+                  <li><img src="img/team-2.jpg"  width="100%" height="200px"></li>
                 </ul> 
                 <ul class="list-unstyled">
-                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
-                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  B+ Blood Group  </li>
-                </ul>
+                  <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Cairo - Nasr City </li>
+                  <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : B+ </li>
+                <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
               </div>
               <div class="portfolio-info">
-                <h4>App1</h4>
-                
                 <div>
                   <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
                   <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
@@ -571,7 +678,321 @@
             </div>
           </div>
         </div>
-    
+        <div class="col-lg-3 col-md-6 portfolio-item filter-B">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy; Ali Ahmed</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-2.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Cairo - Nasr City </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : B+ </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-B">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy; Ali Ahmed</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team-2.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Cairo - Nasr City </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : B+ </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <!-- End of Filter B+ -->
+        <!-- Filter B+ -->
+        <div class="col-lg-3 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy; Ali Ahmed</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team2.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Cairo - Nasr City </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : B- </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-b">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy; Ali Ahmed</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team2.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Cairo - Nasr City </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : B- </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-b">
+              <div class="portfolio-wrap">
+                <div class="card">
+                  <h3 class="card-header mt-0 text-center">&shy; Ali Ahmed</h3>						
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      <li><img src="img/team2.jpg"  width="100%" height="200px"></li>
+                    </ul> 
+                    <ul class="list-unstyled">
+                      <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Cairo - Nasr City </li>
+                      <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : B- </li>
+                    <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                  </div>
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                      <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                    </div>
+                  </div>		
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-b">
+              <div class="portfolio-wrap">
+                <div class="card">
+                  <h3 class="card-header mt-0 text-center">&shy; Ali Ahmed</h3>						
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      <li><img src="img/team2.jpg"  width="100%" height="200px"></li>
+                    </ul> 
+                    <ul class="list-unstyled">
+                      <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Cairo - Nasr City </li>
+                      <li><i class="fa fa-opera fa-lg mt-1"></i>&shy; Blood Group : B- </li>
+                    <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                  </div>
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                      <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                    </div>
+                  </div>		
+                </div>
+              </div>
+        </div>
+        <!-- End of Filter B+ -->
+        <!-- Filter Ab+ -->
+        <div class="col-lg-3 col-md-6 portfolio-item filter-Ab">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/2.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  AB+ Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-Ab">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/2.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  AB+ Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-Ab">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/2.jpg"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  AB+ Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-Ab">
+              <div class="portfolio-wrap">
+                <div class="card">
+                  <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      <li><img src="img/2.jpg"  width="100%" height="200px"></li>
+                    </ul> 
+                    <ul class="list-unstyled">
+                      <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                      <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  AB+ Blood Group  </li>
+                    <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                  </div>
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                      <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                    </div>
+                  </div>		
+                </div>
+              </div>
+        </div>
+        <!-- End of filter Ab+ -->
+        <!-- Filter Ab- -->
+        <div class="col-lg-3 col-md-6 portfolio-item filter-ab">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team4.png"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  AB- Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-ab">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team4.png"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  AB- Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-ab">
+            <div class="portfolio-wrap">
+              <div class="card">
+                <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><img src="img/team4.png"  width="100%" height="200px"></li>
+                  </ul> 
+                  <ul class="list-unstyled">
+                    <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                    <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  AB- Blood Group  </li>
+                  <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                </div>
+                <div class="portfolio-info">
+                  <div>
+                    <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                    <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                  </div>
+                </div>		
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 portfolio-item filter-ab">
+              <div class="portfolio-wrap">
+                <div class="card">
+                  <h3 class="card-header mt-0 text-center">&shy;Mohamed Essa</h3>						
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      <li><img src="img/team4.png"  width="100%" height="200px"></li>
+                    </ul> 
+                    <ul class="list-unstyled">
+                      <li><i class="fa fa-home fa-lg mt-1"></i>&shy; Minia - Mallawi </li>
+                      <li><i class="fa fa-opera fa-lg mt-1"></i>&shy;  AB- Blood Group  </li>
+                    <li><i class="fa fa-phone"></i>&nbsp; 0114205243</li></ul>
+                  </div>
+                  <div class="portfolio-info">
+                    <div>
+                      <a href="profile.html" data-lightbox="portfolio" data-title="App 1" class="link-preview" title=" profile"><i class="fa fa-user-circle"></i></a>
+                      <a href="#" class="link-details" title="connect"><i class="fa fa-comments"></i></a>
+                    </div>
+                  </div>		
+                </div>
+              </div>
+        </div>
+        <!-- End of filter Ab- -->
        </div>
       </div>
     </section>
@@ -754,15 +1175,12 @@
       <div class="container wow fadeInUp">
         <div class="section-header">
           <h3 class="section-title">Contact</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-            doloremque</p>
+          <p class="section-description">Send Us Any Messages </p>
         </div>
       </div>
 
       <!-- Uncomment below if you wan to use dynamic maps -->
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452"
-        width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+      
 
       <div class="container wow fadeInUp mt-5">
         <div class="row justify-content-center">
@@ -772,17 +1190,17 @@
             <div class="info">
               <div>
                 <i class="fa fa-map-marker"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p>Minia - Mallawi<br>Egypt, Eg +20 286 271 0891</p>
               </div>
 
               <div>
                 <i class="fa fa-envelope"></i>
-                <p>info@example.com</p>
+                <p>moh.essa2020@gmail.com</p>
               </div>
 
               <div>
                 <i class="fa fa-phone"></i>
-                <p>+1 5589 55488 55s</p>
+                <p>+20 01030281587</p>
               </div>
             </div>
 
@@ -793,14 +1211,12 @@
               <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
               <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
-
           </div>
-
           <div class="col-lg-5 col-md-8">
             <div class="form">
               <div id="sendmessage">Your message has been sent. Thank you!</div>
               <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
+              <form  method="post" role="form" class="contactForm">
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
                     data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -821,12 +1237,17 @@
                     data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="text-center"><button type="submit">Send Message</button><br></div><br>
               </form>
+              
             </div>
           </div>
         </div>
       </div>
+      <iframe
+        src="https://maps.google.com/maps?q=Assuit&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
     </section>
   </main>
 
@@ -863,7 +1284,7 @@
   <script src="lib/superfish/superfish.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
   <script src="lib/slick/slick.js"></script>
-
+  <script>new WOW().init();</script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
 
